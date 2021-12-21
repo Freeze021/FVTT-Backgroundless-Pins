@@ -4,7 +4,7 @@ Hooks.on("init", () => {
         let tint = this.data.iconTint ? colorStringToHex(this.data.iconTint) : null;
         let iconData = { texture: this.data.icon, size: this.size, tint: tint };
         let icon;
-        if (this.getFlag("backgroundless-pins", "hasBackground")) {
+        if (this.document.getFlag("backgroundless-pins", "hasBackground")) {
             icon = new ControlIcon(iconData);
         } else {
             icon = new BackgroundlessControlIcon(iconData);
